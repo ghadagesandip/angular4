@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { AppProduct } from './products/product.component';
 import { AppInventory } from  './inventory.component';
 import { FormsModule } from '@angular/forms';
+import { MultiplierPipe } from './pipes/multiplier';
 import { ProductFormComponent } from './products/product-form.component'
 import { Footer } from './footer/footer.component';
 
@@ -17,7 +18,7 @@ const appRoutes : Routes = [
 
 
 @NgModule({
-  declarations: [AppComponent, AppInventory, AppProduct, Footer, ProductFormComponent],
+  declarations: [AppComponent, AppInventory, AppProduct, Footer, ProductFormComponent, MultiplierPipe],
   imports: [BrowserModule, RouterModule.forRoot(appRoutes), FormsModule],
   providers: [],
   bootstrap: [AppComponent]
