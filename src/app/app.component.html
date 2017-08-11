@@ -13,5 +13,16 @@
   <li><a [routerLink] = "['/Inventory']">Inventory</a></li>
 </ul>
 
+<div>
+  status : {{status}}
+  <button (click) = onClick(this)> Click </button>
+  {{num | currency}}
+</div>
+
+
+<div>
+  Pipe example : {{10 | Multiplier : 10}}
+</div>
+
 <router-outlet></router-outlet>
 <footersection></footersection>
