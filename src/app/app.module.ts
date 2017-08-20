@@ -1,25 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { AppProduct } from './products/product.component';
-import { AppInventory } from  './inventory.component';
 import { FormsModule } from '@angular/forms';
-import { MultiplierPipe } from './pipes/multiplier';
-import { ProductFormComponent } from './products/product-form.component'
-import { Footer } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { RecipesComponent } from './recipes/recipes.component';
+import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
+import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
+import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { ShoppingEditComponent } from './shoping-list/shopping-edit/shopping-edit.component'
 
-import { RouterModule, Routes } from '@angular/router';
 
 
-const appRoutes : Routes = [
-   { path : 'Product', component : AppProduct},
-   { path : 'Inventory', component : AppInventory }
-];
 
 
 @NgModule({
-  declarations: [AppComponent, AppInventory, AppProduct, Footer, ProductFormComponent, MultiplierPipe],
-  imports: [BrowserModule, RouterModule.forRoot(appRoutes), FormsModule],
+  declarations: [AppComponent, HeaderComponent, RecipesComponent, RecipeListComponent, RecipeDetailComponent, RecipeItemComponent, ShoppingListComponent, ShoppingEditComponent],
+  imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent]
 })
